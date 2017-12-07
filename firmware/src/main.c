@@ -53,15 +53,9 @@ int main(void)
 	#endif
 
     set_bit(LED_DDR, LED);                      // LED como saída
-    //set_bit()
-    //set_bit(PWM_DDR, PWM);                      // PWM como saida
-    
-	// Configuracoes a interrupcao externa por FAULT (IR2127)
-    //clr_bit(FAULT_DDR, FAULT);                  // FAULT como entrada
-    //set_bit(FAULT_PORT, FAULT);                 // FAULT com pull-up
-    //set_bit(EICRA, ISC11);                      // falling edge for int1
-    //set_bit(EIMSK, INT1);                       // enables int1 interrupt
-    //set_bit(EIFR, INTF1);                       // clears int1 interrupt
+    set_bit(PUMPS_DDR, PUMP1);                  // PUMP1 como saída
+    set_bit(PUMPS_DDR, PUMP2);                  // PUMP2 como saída
+    set_bit(PUMPS_DDR, PUMP3);                  // PUMP3 como saída
 
     sei();
 	
