@@ -43,6 +43,12 @@
 #define     PUMPS_PORT              PORTD
 #define     PUMPS_PIN               PIND
 #define     PUMPS_DDR               DDRD
+#define     set_pump1()             set_bit(PUMPS_PORT, PUMP1)
+#define     set_pump2()             set_bit(PUMPS_PORT, PUMP2)
+#define     set_pump3()             set_bit(PUMPS_PORT, PUMP3)
+#define     clr_pump1()             clr_bit(PUMPS_PORT, PUMP1)
+#define     clr_pump2()             clr_bit(PUMPS_PORT, PUMP2)
+#define     clr_pump3()             clr_bit(PUMPS_PORT, PUMP3)
 
 #define     LED_PORT                PORTD
 #define     LED_PIN                 PIND
