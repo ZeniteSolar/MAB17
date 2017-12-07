@@ -36,13 +36,13 @@
 #define FAULT_COUNT_LIMIT           50
 
 
-// INPUT PINS DEFINITIONS
-//#define     DEAD_MAN_SWITCH         PD5
-//#define     ON_OFF_SWITCH           PD4
-//#define     SWITCHES_PORT           PORTD
-//#define     SWITCHES_PIN            PIND
-//#define     SWITCHES_DDR            DDRD
-
+// OUTPUT PINS DEFINITIONS
+#define     PUMP1                   PD2
+#define     PUMP2                   PD3
+#define     PUMP3                   PD4
+#define     PUMPS_PORT              PORTD
+#define     PUMPS_PIN               PIND
+#define     PUMPS_DDR               DDRD
 
 #define     LED_PORT                PORTD
 #define     LED_PIN                 PIND
