@@ -63,8 +63,7 @@ inline void can_app_send_motor(void)
     msg.length                              = CAN_LENGTH_MSG_MAM17_MOTOR;
 
     msg.data[CAN_SIGNATURE_BYTE]            = CAN_SIGNATURE_SELF;
-    msg.data[CAN_MSG_MAM17_MOTOR_D_BYTE]    = control.D;
-    msg.data[CAN_MSG_MAM17_MOTOR_LIM_BYTE]  = control.I;    
+    //msg.data[CAN_MSG_MAM17_MOTOR_D_BYTE]    = control.D;
 
     can_send_message(&msg); 
 }
@@ -108,7 +107,7 @@ inline void can_app_extractor_mic17_motor(can_t *msg)
         
         can_app_checks_without_mic17_msg = 0;
 
-        system_flags.motor_on       = bit_is_set(msg->data[
+        /*system_flags.motor_on       = bit_is_set(msg->data[
             CAN_MSG_MIC17_MOTOR_MOTOR_ON_BYTE], 
             CAN_MSG_MIC17_MOTOR_MOTOR_ON_BIT);
         
@@ -118,9 +117,7 @@ inline void can_app_extractor_mic17_motor(can_t *msg)
          
         control.D_raw_target        = msg->data[
             CAN_MSG_MIC17_MOTOR_D_RAW_BYTE];
-
-        control.I_raw_target        = msg->data[
-            CAN_MSG_MIC17_MOTOR_I_RAW_BYTE];
+        */
 
     }
 }
