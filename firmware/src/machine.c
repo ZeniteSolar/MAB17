@@ -141,6 +141,16 @@ inline void task_running(void)
         led_clk_div = 0;
     }
 
+    if(system_flags.pump1)      set_pump1();
+    else                        clr_pump1();
+
+    if(system_flags.pump2)      set_pump2();
+    else                        clr_pump2();
+
+    if(system_flags.pump3)      set_pump3();
+    else                        clr_pump3();
+
+
 }
 
 /**
