@@ -87,7 +87,7 @@
 // FILTERS FOR MESSAGES FROM MAB17:
 #define CAN_MASK_MAB17                  0b11111111111   //<! Mask for MAB17
 #define CAN_FILTER_MSG_MAB17_STATE      0b00001000000   //<! Informs about state and errors
-#define CAN_FILTER_MSG_MAB17_PUMP       0b00001000001   //<! Informs about pumps
+#define CAN_FILTER_MSG_MAB17_PUMPS      0b00001000001   //<! Informs about pumps
 
 // MESSAGES FROM MIC17 TO MAM17:
 #define CAN_LENGTH_MSG_MAB17_PUMPS      2
