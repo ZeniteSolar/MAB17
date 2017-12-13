@@ -18,6 +18,7 @@
 #include "../lib/cbuf.h"
 #include "../lib/log2.h"
 #include "conf.h"
+#include "usart.h"
 
 #include "dbg_vrb.h"
 
