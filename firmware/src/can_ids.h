@@ -35,8 +35,17 @@
 
 //------------------------------------------------------------------------------
 
-// FILTERS FOR MESSAGES FROM MIC17 :
+// MASKS:
 #define CAN_MASK_MIC17                  0b11111111111   //<! Mask for MIC17
+#define CAN_MASK_MAM17                  0b11111111111   //<! Mask for MAM17
+#define CAN_MASK_MAB17                  0b11111111111   //<! Mask for MAB17
+#define CAN_MASK_MCS17                  0b11111111111   //<! Mask for MCS17
+#define CAN_MASK_MAD17                  0b11111111111   //<! Mask for MAD17
+#define CAN_MASK_MCC17                  0b11111111111   //<! Mask for MAD17
+
+//------------------------------------------------------------------------------
+
+// FILTERS FOR MESSAGES FROM MIC17 :
 #define CAN_FILTER_MSG_MIC17_STATE      0b00000001000   //<! Informs about state and errors
 #define CAN_FILTER_MSG_MIC17_MOTOR      0b00000001001   //<! Informs about motor controls.
 #define CAN_FILTER_MSG_MIC17_PUMPS      0b00000001010   //<! Informs about pumps controls.
@@ -73,7 +82,6 @@
 //------------------------------------------------------------------------------
 
 // FILTERS FOR MESSAGES FROM MAM17:
-#define CAN_MASK_MAM17                  0b11111111111   //<! Mask for MAM17
 #define CAN_FILTER_MSG_MAM17_STATE      0b00000010000   //<! Informs about state and errors
 #define CAN_FILTER_MSG_MAM17_MOTOR      0b00000010001   //<! Informs about motor
 
@@ -85,7 +93,6 @@
 //------------------------------------------------------------------------------
 
 // FILTERS FOR MESSAGES FROM MAB17:
-#define CAN_MASK_MAB17                  0b11111111111   //<! Mask for MAB17
 #define CAN_FILTER_MSG_MAB17_STATE      0b00001000000   //<! Informs about state and errors
 #define CAN_FILTER_MSG_MAB17_PUMPS      0b00001000001   //<! Informs about pumps
 
@@ -99,7 +106,6 @@
 //------------------------------------------------------------------------------
 
 // FILTERS FOR MESSAGES FROM MCS17:
-#define CAN_MASK_MCS17                  0b11111111111   //<! Mask for MCS17
 #define CAN_FILTER_MSG_MCS17_STATE      0b00100000000   //<! Informs about state and errors
 #define CAN_FILTER_MSG_MCS17_BOAT_ON    0b00100000001   //<! Informs about bat, cap and main relay
 
@@ -113,13 +119,11 @@
 //------------------------------------------------------------------------------
 
 // FILTERS FOR MESSAGES FROM MAD17:
-#define CAN_MASK_MAD17                  0b11111111111   //<! Mask for MAD17
 #define CAN_FILTER_MSG_MAD17_STATE      0b10000000000   //<! Informs about state and errors
  
 //------------------------------------------------------------------------------
 
 // FILTERS FOR MESSAGES FROM MCC17:
-#define CAN_MASK_MCC17                  0b11111111111   //<! Mask for MAD17
 #define CAN_FILTER_MSG_MCC17_STATE      0b00000100000   //<! Informs about state and errors
 #define CAN_FILTER_MSG_MCC17_MPPT       0b00000100001   //<! Informs about mppts
 
