@@ -73,6 +73,7 @@ uint8_t total_errors;   // Contagem de ERROS
 
 // other variables
 uint8_t led_clk_div;
+uint8_t vbat;
 
 // ISRs
 ISR(TIMER2_COMPA_vect);

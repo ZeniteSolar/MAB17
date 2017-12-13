@@ -75,6 +75,7 @@ inline void print_error_flags(void)
 {
     VERBOSE_MSG_MACHINE(usart_send_string(" NOCAN: "));
     VERBOSE_MSG_MACHINE(usart_send_char(48+error_flags.no_canbus));
+    VERBOSE_MSG_MACHINE(usart_send_char('\n'));
 }
  
 /**
@@ -99,6 +100,10 @@ inline void task_initializing(void)
 {
     set_led();
 
+    clr_pump1();
+    clr_pump2();
+    clr_pump3();
+
     if(!error_flags.all){
         VERBOSE_MSG_INIT(usart_send_string("System initialized without errors.\n"));
         set_state_idle();
@@ -107,6 +112,8 @@ inline void task_initializing(void)
         VERBOSE_MSG_ERROR(usart_send_string("Sorry. I have have found errors in the initialilation process. \n\nI will begin to process it...\n"));
         set_state_error();
     }
+
+
 }
 
 /**
@@ -122,6 +129,10 @@ inline void task_idle(void)
         cpl_led();
         led_clk_div = 0;
     }
+
+    clr_pump1();
+    clr_pump2();
+    clr_pump3();
  
     //if(system_flags.motor_on && system_flags.dms && system_flags.pot_zero_width)
     {
@@ -141,14 +152,20 @@ inline void task_running(void)
         led_clk_div = 0;
     }
 
-    if(system_flags.pump1)      set_pump1();
-    else                        clr_pump1();
+    // vbat was disabled because the hardware don't have a differential pair to
+    // read the voltage from the auxiliary battery and the reference ground for
+    // auxiliary battery and main battery can't be connected. Next hardware 
+    // version need to be fixed in order to make it work.
+    //vbat = ma_adc0();
 
-    if(system_flags.pump2)      set_pump2();
-    else                        clr_pump2();
+    if(system_flags.pump1_on)       set_pump1();
+    else                            clr_pump1();
 
-    if(system_flags.pump3)      set_pump3();
-    else                        clr_pump3();
+    if(system_flags.pump2_on)       set_pump2();
+    else                            clr_pump2();
+
+    if(system_flags.pump3_on)       set_pump3();
+    else                            clr_pump3();
 
 
 }
