@@ -11,13 +11,6 @@ int main(void)
 
     _delay_ms(1000);
 
-    #ifdef PWM_ON
-        VERBOSE_MSG_INIT(usart_send_string("PWM..."));
-        pwm_init();
-        VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
-    #endif 
- 
-
     #ifdef CAN_ON
         VERBOSE_MSG_INIT(usart_send_string("CAN (500kbps)..."));
         can_init(BITRATE_500_KBPS);
@@ -32,7 +25,6 @@ int main(void)
         adc_init();
         VERBOSE_MSG_INIT(usart_send_string(" OK!\n"));
     #endif
-
 
     #ifdef SLEEP_ON 
         VERBOSE_MSG_INIT(usart_send_string("SLEEP..."));
