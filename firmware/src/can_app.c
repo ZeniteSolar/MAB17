@@ -102,6 +102,8 @@ inline void can_app_extractor_mic17_state(can_t *msg)
 inline void can_app_extractor_mic17_pumps(can_t *msg)
 {
     if(msg->data[CAN_SIGNATURE_BYTE] == CAN_SIGNATURE_MIC17){
+
+        can_app_print_msg(msg);
         
         can_app_checks_without_mic17_msg = 0;
 
@@ -159,7 +161,7 @@ inline void check_can(void)
         VERBOSE_MSG_CAN_APP(usart_send_string("Error: too many cycles withtou message.\n"));
         can_app_checks_without_mic17_msg = 0;
         error_flags.no_canbus = 1;
-        set_state_error();
+        //set_state_error();
     }
     
     if(can_check_message()){
