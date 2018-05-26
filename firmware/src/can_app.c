@@ -161,7 +161,7 @@ inline void check_can(void)
         VERBOSE_MSG_CAN_APP(usart_send_string("Error: too many cycles withtou message.\n"));
         can_app_checks_without_mic17_msg = 0;
         error_flags.no_canbus = 1;
-        //set_state_error();
+        set_state_error();
     }
     
     if(can_check_message()){

@@ -1,0 +1,22 @@
+Circuit: * C:\users\joaoantoniocardoso\Desktop\ZeniteSolar\MAB17\hardware\simulations\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.5 to 1.5
+
+Date: Mon May 07 15:50:56 2018
+Total elapsed time: 9.190 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 557723
+traniter = 557684
+tranpoints = 99534
+accept = 74360
+rejected = 25175
+matrix size = 46
+fillins = 45
+solver = Alternate
+Matrix Compiler1: 7.21 KB object code size  3.7/3.3/[2.1]
+Matrix Compiler2: 5.11 KB object code size  2.1/2.2/[1.2]
+
